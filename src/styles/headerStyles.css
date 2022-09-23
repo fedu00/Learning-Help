@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+.headerContainer {
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  padding: 32px 0;
+}
+.formContainer {
+  padding: 20px;
+  box-shadow: -4px 4px 10px #666;
+  border-radius: 5px;
+  background-color: antiquewhite;
+  width: 600px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0;
+}
+
+.formInput {
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 18px;
+  border: none;
+}
+
+.textAreaNote {
+  resize: none;
+  border-radius: 5px;
+  border: none;
+  padding: 4px;
+  font-size: 18px;
+}
