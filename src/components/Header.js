@@ -1,9 +1,32 @@
 import { useState } from "react";
 import "../styles/headerStyles.css";
 
-const Header = () => {
-  const [title, setTitle] = useState("");
-  const [notes, setNotes] = useState("");
+const Header = ({ onAdd }) => {
+  const [note, setNote] = useState({
+    title: "",
+    content: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setNote((preValue) => {
+      return {
+        ...preValue,
+        [name]: value,
+      };
+    });
+  };
+
+  const submitButton = (event) => {
+    onAdd(note);
+    event.preventDefault();
+    console.log(note);
+    setNote({
+      title: "",
+      content: "",
+    });
+  };
 
   return (
     <div className="headerContainer">
@@ -15,21 +38,22 @@ const Header = () => {
               className="formInput"
               type="text"
               placeholder="zacny tytuł"
-              name="name"
-              value={title}
-              onChange={(event) => setTitle(event.target.value)}
+              name="title"
+              value={note.title}
+              onChange={handleChange}
             />
           </div>
           <div className="inputContainer">
             <textarea
               className="textAreaNote"
-              placeholder="no napisz coś!"
+              // placeholder="no napisz coś!"
               type="text"
-              value={notes}
-              onChange={(event) => setNotes(event.target.value)}
+              name="content"
+              value={note.content}
+              onChange={handleChange}
             />
           </div>
-          {/* <button className="formButton">dodaj notatke</button> */}
+          <button onClick={submitButton}>add</button>
         </form>
       </div>
     </div>

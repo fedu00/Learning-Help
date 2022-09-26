@@ -1,0 +1,22 @@
+.noteContainer {
+  width: 300px;
+  /* height: 250px; */
+  background-color: antiquewhite;
+  margin: 20px;
+  padding: 10px;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.logo {
+  position: relative;
+  /* top: 150px; */
+  /* left: 240px; */
+  height: 40px;
+  float: right;
+}
