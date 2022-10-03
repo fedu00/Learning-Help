@@ -37,7 +37,7 @@ const Header = ({ onAdd }) => {
             <input
               className="formInput"
               type="text"
-              placeholder="zacny tytuł"
+              placeholder="title"
               name="title"
               value={note.title}
               onChange={handleChange}
@@ -46,14 +46,16 @@ const Header = ({ onAdd }) => {
           <div className="inputContainer">
             <textarea
               className="textAreaNote"
-              // placeholder="no napisz coś!"
+              placeholder="your note!"
               type="text"
               name="content"
               value={note.content}
               onChange={handleChange}
             />
           </div>
-          <button onClick={submitButton}>add</button>
+          <button className="add-button" onClick={submitButton}>
+            add note
+          </button>
         </form>
       </div>
     </div>
