@@ -1,19 +1,25 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(235, 235, 235);
 }
 .headerContainer {
-  background-color: bisque;
   display: flex;
   justify-content: center;
   padding: 32px 0;
 }
+
+.formContainer .title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
 .formContainer {
   padding: 20px;
-  box-shadow: -4px 4px 10px #666;
+  box-shadow: -2px 2px 5px #666;
   border-radius: 5px;
-  background-color: antiquewhite;
+  background-color: rgb(245, 245, 245);
   width: 600px;
 }
 
@@ -24,16 +30,45 @@
 }
 
 .formInput {
-  border-radius: 5px;
-  padding: 4px;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 700;
+  background-color: rgb(245, 245, 245);
   border: none;
 }
 
 .textAreaNote {
   resize: none;
+  background-color: rgb(245, 245, 245);
+  font-weight: 600;
   border-radius: 5px;
   border: none;
   padding: 4px;
   font-size: 18px;
+}
+
+h1,
+form {
+  background-color: rgb(245, 245, 245);
+}
+
+.add-button {
+  float: right;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(103, 103, 206);
+  font-size: 18px;
+  padding: 10px 15px;
+  border: none;
+}
+
+@media (max-width: 650px) {
+  .formContainer {
+    width: 400px;
+  }
+}
+
+@media (max-width: 450px) {
+  .formContainer {
+    width: 300px;
+  }
 }
