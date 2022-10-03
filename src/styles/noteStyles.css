@@ -6,8 +6,6 @@
 
 .noteContainer {
   flex-grow: 0;
-  /* flex-shrink: ; */
-  /* min-height: 115px; */
   width: 300px;
   background-color: rgb(245, 245, 245);
   border-radius: 5px;
