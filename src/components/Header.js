@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../styles/headerStyles.css";
 
 const Header = ({ onAdd }) => {
+  const [isExpanded, setExpanded] = useState(false);
   const [note, setNote] = useState({
     title: "",
     content: "",
@@ -19,33 +20,39 @@ const Header = ({ onAdd }) => {
   };
 
   const submitButton = (event) => {
-    onAdd(note);
-    event.preventDefault();
-    console.log(note);
-    setNote({
-      title: "",
-      content: "",
-    });
+    if (note.title !== "" || note.content !== "") {
+      onAdd(note);
+      event.preventDefault();
+      setNote({
+        title: "",
+        content: "",
+      });
+      setExpanded(false);
+    } else {
+      alert("your note is empty, you can't add it!");
+    }
   };
 
   return (
     <div className="headerContainer">
       <div className="formContainer">
-        <h1 className="title">Stwórz notatkę</h1>
         <form>
-          <div className="inputContainer">
-            <input
-              className="formInput"
-              type="text"
-              placeholder="title"
-              name="title"
-              value={note.title}
-              onChange={handleChange}
-            />
-          </div>
+          {isExpanded && (
+            <div className="inputContainer">
+              <input
+                className="formInput"
+                type="text"
+                placeholder="title"
+                name="title"
+                value={note.title}
+                onChange={handleChange}
+              />
+            </div>
+          )}
           <div className="inputContainer">
             <textarea
               className="textAreaNote"
+              onClick={() => setExpanded(true)}
               placeholder="your note!"
               type="text"
               name="content"
