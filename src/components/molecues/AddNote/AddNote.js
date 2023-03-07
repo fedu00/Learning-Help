@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "../styles/headerStyles.css";
+import "./AddNoteStyles.css";
 
-const Header = ({ onAdd }) => {
+const AddNote = ({ onAdd }) => {
   const [isExpanded, setExpanded] = useState(false);
   const [note, setNote] = useState({
     title: "",
@@ -69,4 +69,4 @@ const Header = ({ onAdd }) => {
   );
 };
 
-export default Header;
+export default AddNote;

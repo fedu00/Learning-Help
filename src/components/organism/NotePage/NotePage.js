@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import Header from "./Header";
-import Notes from "./Notes";
+import AddNote from "../../molecues/AddNote/AddNote";
+import Notes from "../../atoms/Notes/Notes";
 
-const HomePage = () => {
+const NotePage = () => {
   const [notes, setNotes] = useState(JSON.parse(localStorage.notes) || []);
 
   useEffect(() => {
@@ -22,10 +22,10 @@ const HomePage = () => {
   };
   return (
     <>
-      <Header onAdd={addNote} />
+      <AddNote onAdd={addNote} />
       <Notes notes={notes} deleteNote={deleteNote} />
     </>
   );
 };
 
-export default HomePage;
+export default NotePage;

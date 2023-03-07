@@ -1,5 +1,5 @@
-import Note from "./Note";
-import "../styles/noteStyles.css";
+import Note from "../Note/Note";
+import "./NotesStyles.css";
 
 const Notes = ({ notes, deleteNote }) => {
   return (

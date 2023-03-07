@@ -1,5 +1,4 @@
-import "../styles/noteStyles.css";
-// import logo from "../assets/icons/deteleIcon.svg";
+import "./noteStyles.css";
 
 const Note = ({ title, content, onDelete, id }) => {
   return (
@@ -9,7 +8,6 @@ const Note = ({ title, content, onDelete, id }) => {
       <button className="button-delete" onClick={() => onDelete(id)}>
         delete
       </button>
-      {/* <img src={logo} className="logo" alt="logo" /> */}
     </div>
   );
 };
