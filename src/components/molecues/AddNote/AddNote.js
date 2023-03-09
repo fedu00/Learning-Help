@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./AddNoteStyles.css";
 
-const AddNote = ({ onAdd }) => {
+const AddNote = ({ onAdd, editNoteItem, confirmEditNoteItem, editId }) => {
   const [isExpanded, setExpanded] = useState(false);
   const [note, setNote] = useState({
     title: "",
@@ -19,6 +19,13 @@ const AddNote = ({ onAdd }) => {
     });
   };
 
+  useEffect(() => {
+    if (editNoteItem.length !== 0) {
+      setNote(editNoteItem);
+      setExpanded(true);
+    }
+  }, [editNoteItem]);
+
   const submitButton = (event) => {
     if (note.title !== "" || note.content !== "") {
       onAdd(note);
@@ -30,6 +37,20 @@ const AddNote = ({ onAdd }) => {
       setExpanded(false);
     } else {
       alert("your note is empty, you can't add it!");
+    }
+  };
+
+  const submitEditButton = (event) => {
+    if (note.title !== "" || note.content !== "") {
+      confirmEditNoteItem(note);
+      event.preventDefault();
+      setNote({
+        title: "",
+        content: "",
+      });
+      setExpanded(false);
+    } else {
+      alert("your note is empty, you can't confirm edit!");
     }
   };
 
@@ -60,9 +81,15 @@ const AddNote = ({ onAdd }) => {
               onChange={handleChange}
             />
           </div>
-          <button className="add-button" onClick={submitButton}>
-            add note
-          </button>
+          {editId !== "" ? (
+            <button className="add-button" onClick={submitEditButton}>
+              edit note
+            </button>
+          ) : (
+            <button className="add-button" onClick={submitButton}>
+              add note
+            </button>
+          )}
         </form>
       </div>
     </div>

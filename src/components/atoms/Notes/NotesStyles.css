@@ -1,5 +1,9 @@
 .notes-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: 300px 300px;
+  column-gap: 20px;
+  row-gap: 20px;
+  width: 80%;
+  margin: 50px auto;
 }
