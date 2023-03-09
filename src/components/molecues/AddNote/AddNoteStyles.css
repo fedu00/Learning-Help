@@ -8,11 +8,8 @@
   display: flex;
   justify-content: center;
   padding: 32px 0;
-}
-
-.formContainer .title {
-  font-size: 26px;
-  font-weight: 700;
+  height: 280px;
+  background-color: #666;
 }
 
 .formContainer {
@@ -21,6 +18,12 @@
   border-radius: 5px;
   background-color: rgb(245, 245, 245);
   width: 600px;
+  position: relative;
+}
+
+.formContainer .title {
+  font-size: 26px;
+  font-weight: 700;
 }
 
 .inputContainer {
@@ -52,7 +55,9 @@ form {
 }
 
 .add-button {
-  float: right;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
   border-radius: 5px;
   color: white;
   background-color: rgb(103, 103, 206);

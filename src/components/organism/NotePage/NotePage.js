@@ -4,6 +4,8 @@ import Notes from "../../atoms/Notes/Notes";
 
 const NotePage = () => {
   const [notes, setNotes] = useState(JSON.parse(localStorage.notes) || []);
+  const [editNoteItem, setEditNoteItem] = useState([]);
+  const [editId, setEditId] = useState("");
 
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
@@ -11,8 +13,20 @@ const NotePage = () => {
 
   const addNote = (newNote) => {
     setNotes((prevValue) => {
-      return [...prevValue, newNote];
+      return [newNote, ...prevValue];
     });
+  };
+
+  const confirmEditNoteItem = (editNote) => {
+    setEditId("");
+    setNotes((prevValue) => {
+      return [editNote, ...prevValue.filter((note, index) => index !== editId)];
+    });
+  };
+
+  const editNote = (id) => {
+    setEditNoteItem(notes.filter((note, index) => index === id)[0]);
+    setEditId(id);
   };
 
   const deleteNote = (id) => {
@@ -22,8 +36,13 @@ const NotePage = () => {
   };
   return (
     <>
-      <AddNote onAdd={addNote} />
-      <Notes notes={notes} deleteNote={deleteNote} />
+      <AddNote
+        onAdd={addNote}
+        editNoteItem={editNoteItem}
+        confirmEditNoteItem={confirmEditNoteItem}
+        editId={editId}
+      />
+      <Notes notes={notes} deleteNote={deleteNote} editNote={editNote} />
     </>
   );
 };
