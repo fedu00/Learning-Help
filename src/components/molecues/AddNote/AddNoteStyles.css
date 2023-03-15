@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(235, 235, 235);
 }
 .headerContainer {
   display: flex;
