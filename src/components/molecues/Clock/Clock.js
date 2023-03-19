@@ -49,7 +49,7 @@ const Clock = () => {
             setBreakSeconds(breakSeconds - 1);
           }
         }
-      }, 100);
+      }, 1000);
     } else if (pomodore.workON) {
       dispatch(
         createPomodoro({
