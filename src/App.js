@@ -14,15 +14,14 @@ function App() {
   // const location = useLocation();
   return (
     <Provider store={store}>
-      {/* <Router> */}
-      <MainTemplate>
-        <div>lalalaalalalalall</div>
-        {/* <Routes>
+      <Router>
+        <MainTemplate>
+          <Routes>
             <Route path="/Learning-Help/" element={<NotePage />} />
             <Route path="/pomodore" element={<PomodorePage />} />
-          </Routes> */}
-      </MainTemplate>
-      {/* </Router> */}
+          </Routes>
+        </MainTemplate>
+      </Router>
     </Provider>
   );
 }
