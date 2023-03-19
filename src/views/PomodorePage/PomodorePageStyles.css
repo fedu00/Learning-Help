@@ -1,0 +1,48 @@
+.section-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pomodore-container {
+  background-color: rgb(250, 131, 95);
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pomodore-container .timer-container {
+  display: flex;
+}
+
+.pomodore-container .timer-container input {
+  background-color: rgb(250, 131, 95);
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: none;
+  color: white;
+  font-size: 30px;
+  width: 200px;
+  padding: 15px 10px;
+  margin: 10px;
+  outline: none;
+}
+
+.pomodore-container .timer-buttons-container {
+  margin-top: 50px;
+}
+
+.pomodore-container .timer-buttons-container button {
+  font-size: 25px;
+  background-color: rgb(250, 131, 95);
+  padding: 15px 25px;
+  margin: 10px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import AddNote from "../../molecues/AddNote/AddNote";
-import Notes from "../../atoms/Notes/Notes";
+import AddNote from "../../components/molecues/AddNote/AddNote";
+import Notes from "../../components/atoms/Notes/Notes";
 
 const NotePage = () => {
   const [notes, setNotes] = useState(JSON.parse(localStorage.notes) || []);
