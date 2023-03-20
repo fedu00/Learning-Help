@@ -3,7 +3,9 @@ import AddNote from "../../components/molecues/AddNote/AddNote";
 import Notes from "../../components/atoms/Notes/Notes";
 
 const NotePage = () => {
-  const [notes, setNotes] = useState(JSON.parse(localStorage.notes) || []);
+  const [notes, setNotes] = useState(
+    localStorage.length > 0 ? JSON.parse(localStorage.notes) : []
+  );
   const [editNoteItem, setEditNoteItem] = useState([]);
   const [editId, setEditId] = useState("");
 
