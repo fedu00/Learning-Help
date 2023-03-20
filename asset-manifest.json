@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/learning.help/static/css/main.84d2ad8b.css",
-    "main.js": "/learning.help/static/js/main.a9bfa517.js",
+    "main.js": "/learning.help/static/js/main.f2f9262e.js",
     "static/js/787.74861886.chunk.js": "/learning.help/static/js/787.74861886.chunk.js",
     "static/media/pomodoro.svg": "/learning.help/static/media/pomodoro.dbc57385757bf6dac356b8dbd720cf60.svg",
     "static/media/plan.svg": "/learning.help/static/media/plan.6df84d5ad5c14db8334b61ad66e1b224.svg",
@@ -10,11 +10,11 @@
     "static/media/calendar.svg": "/learning.help/static/media/calendar.5c06ab9ded2fc885e81a09a1aea9dca0.svg",
     "index.html": "/learning.help/index.html",
     "main.84d2ad8b.css.map": "/learning.help/static/css/main.84d2ad8b.css.map",
-    "main.a9bfa517.js.map": "/learning.help/static/js/main.a9bfa517.js.map",
+    "main.f2f9262e.js.map": "/learning.help/static/js/main.f2f9262e.js.map",
     "787.74861886.chunk.js.map": "/learning.help/static/js/787.74861886.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.84d2ad8b.css",
-    "static/js/main.a9bfa517.js"
+    "static/js/main.f2f9262e.js"
   ]
 }
