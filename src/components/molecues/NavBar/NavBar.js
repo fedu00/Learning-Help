@@ -4,17 +4,27 @@ import { ReactComponent as PomodoroIcon } from "../../../assets/icons/pomodoro.s
 import { ReactComponent as ClockIcon } from "../../../assets/icons/clock.svg";
 import { ReactComponent as PlanIcon } from "../../../assets/icons/plan.svg";
 import { ReactComponent as NotesIcon } from "../../../assets/icons/notes.svg";
+// import NotesSvg from "../../../assets/icons/notes";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const NavBar = () => {
+  const [activeIcon, setActiveIcon] = useState("notes");
   return (
     <div className="NavBarContainer">
-      <NavLink to="/learning.help/">
-        {" "}
-        <NotesIcon />
+      <NavLink
+        to="/learning.help/"
+        onClick={() => setActiveIcon("notes")}
+        className="link"
+      >
+        <NotesIcon className={activeIcon === "notes" ? "active" : null} />
       </NavLink>
-      <NavLink to="/pomodore">
-        <PomodoroIcon />
+      <NavLink
+        to="/pomodore"
+        onClick={() => setActiveIcon("pomodore")}
+        className="link"
+      >
+        <PomodoroIcon className={activeIcon === "pomodore" ? "active" : null} />
       </NavLink>
       {/* <NavLink to="/">
         <CalendarIcon />

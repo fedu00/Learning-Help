@@ -8,14 +8,12 @@
   justify-content: center;
   padding: 32px 0;
   height: 280px;
-  background-color: #666;
+  box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .formContainer {
   padding: 20px;
-  box-shadow: -2px 2px 5px #666;
-  border-radius: 5px;
-  background-color: rgb(245, 245, 245);
+  border: 2px solid #525f73;
   width: 600px;
   position: relative;
 }
@@ -34,23 +32,26 @@
 .formInput {
   font-size: 22px;
   font-weight: 700;
-  background-color: rgb(245, 245, 245);
+  color: white;
+  background-color: #343e4e;
   border: none;
+  outline: none;
 }
 
 .textAreaNote {
   resize: none;
-  background-color: rgb(245, 245, 245);
+  color: white;
+  background-color: #343e4e;
   font-weight: 600;
   border-radius: 5px;
   border: none;
   padding: 4px;
   font-size: 18px;
+  outline: none;
 }
 
-h1,
-form {
-  background-color: rgb(245, 245, 245);
+::placeholder {
+  color: white;
 }
 
 .add-button {
@@ -59,7 +60,7 @@ form {
   bottom: 10px;
   border-radius: 5px;
   color: white;
-  background-color: rgb(103, 103, 206);
+  background-color: #697fa3;
   font-size: 18px;
   padding: 10px 15px;
   border: none;

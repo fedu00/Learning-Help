@@ -4,12 +4,12 @@
   flex-direction: column;
   align-items: center;
   z-index: 3;
-  background-color: rgb(219, 212, 189);
+  background-color: #343e4e;
   top: 50%;
   right: 50px;
   transform: translateY(-50%);
-  border: 4px solid rgb(255, 214, 101);
-  border-radius: 10px;
+  border: 2px solid #525f73;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
   padding: 30px;
 }
 
@@ -19,11 +19,43 @@
   padding: 10px;
   cursor: pointer;
   display: block;
-  border-radius: 5px;
+  fill: #999999;
   transition: 0.4s;
+}
+
+.link {
+  position: relative;
+}
+.NavBarContainer .link::after {
+  position: absolute;
+  background-color: #444444;
+  top: 0px;
+  left: -140px;
+  font-size: 24px;
+  padding: 10px 15px;
+  color: white;
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 1.5s;
+}
+
+.link:nth-child(1):after {
+  content: "notebook";
+}
+.link:nth-child(2):after {
+  content: "pomodore";
+}
+
+.NavBarContainer .active {
+  fill: white;
 }
 
 .NavBarContainer svg:hover {
   transform: scale(1.3);
-  background-color: rgb(255, 214, 101);
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.4);
+  fill: white;
+}
+
+.NavBarContainer .link:hover:after {
+  opacity: 1;
 }
