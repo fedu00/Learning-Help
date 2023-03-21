@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/learning.help/static/css/main.84d2ad8b.css",
-    "main.js": "/learning.help/static/js/main.ff69565a.js",
+    "main.css": "/learning.help/static/css/main.24e66e58.css",
+    "main.js": "/learning.help/static/js/main.ee497f21.js",
     "static/js/787.74861886.chunk.js": "/learning.help/static/js/787.74861886.chunk.js",
-    "static/media/pomodoro.svg": "/learning.help/static/media/pomodoro.dbc57385757bf6dac356b8dbd720cf60.svg",
+    "static/media/pomodoro.svg": "/learning.help/static/media/pomodoro.4db6d37d52739dedfc8963791a004660.svg",
     "static/media/plan.svg": "/learning.help/static/media/plan.6df84d5ad5c14db8334b61ad66e1b224.svg",
     "static/media/clock.svg": "/learning.help/static/media/clock.dd6dc853c97f50e15e901c363d7080e9.svg",
-    "static/media/notes.svg": "/learning.help/static/media/notes.7e9fb9ebebf96197e8b0651e25679ffa.svg",
+    "static/media/notes.svg": "/learning.help/static/media/notes.1bde19e4ec122e039fd290c65e41692e.svg",
     "static/media/calendar.svg": "/learning.help/static/media/calendar.5c06ab9ded2fc885e81a09a1aea9dca0.svg",
     "index.html": "/learning.help/index.html",
-    "main.84d2ad8b.css.map": "/learning.help/static/css/main.84d2ad8b.css.map",
-    "main.ff69565a.js.map": "/learning.help/static/js/main.ff69565a.js.map",
+    "main.24e66e58.css.map": "/learning.help/static/css/main.24e66e58.css.map",
+    "main.ee497f21.js.map": "/learning.help/static/js/main.ee497f21.js.map",
     "787.74861886.chunk.js.map": "/learning.help/static/js/787.74861886.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.84d2ad8b.css",
-    "static/js/main.ff69565a.js"
+    "static/css/main.24e66e58.css",
+    "static/js/main.ee497f21.js"
   ]
 }
