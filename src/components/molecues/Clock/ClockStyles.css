@@ -3,22 +3,33 @@
   top: 20px;
   left: 20px;
   height: 250px;
-  width: 400px;
   background-color: rgb(40, 160, 120);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  font-size: 24px;
+}
+.clock-container > div {
+  margin: 0 10px;
 }
 
-.clock-container p {
-  font-size: 30px;
-  margin-bottom: 15px;
+.clock-container .intervals p {
+  font-size: 24px;
 }
 
-.clock-container .clock-time {
-  font-size: 26px;
+.clock-container .intervals .number-of-intervals {
+  font-size: 36px;
+  text-align: center;
+}
+
+.clock-container .time-container {
+  width: 120px;
+  display: flex;
+}
+
+.clock-container .time-container .clock-time {
+  font-size: 50px;
 }
 
 .clock-container .intervals {

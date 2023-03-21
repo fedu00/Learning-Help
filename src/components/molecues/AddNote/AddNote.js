@@ -83,11 +83,11 @@ const AddNote = ({ onAdd, editNoteItem, confirmEditNoteItem, editId }) => {
           </div>
           {editId !== "" ? (
             <button className="add-button" onClick={submitEditButton}>
-              edit note
+              EDIT NOTE
             </button>
           ) : (
             <button className="add-button" onClick={submitButton}>
-              add note
+              ADD NOTE
             </button>
           )}
         </form>

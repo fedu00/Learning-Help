@@ -70,10 +70,17 @@ const Clock = () => {
     currentSeconds < 10 ? `0${currentSeconds}` : currentSeconds;
   return (
     <div className="clock-container">
-      <p>{isBreak ? "break time, relax :)" : "Work!"}</p>
-      <div className="clock-time">minutes: {timerMinutes}</div>
-      <div className="clock-time">seconds: {timerSeconds}</div>
-      <div className="intervals">you have {workInterval} intervals left</div>
+      <div className="intervals">
+        <p className="number-of-intervals">{workInterval}</p>
+        <p>INTERWALS</p>
+      </div>
+      <div className="time-container">
+        <div className="clock-time">{timerMinutes}:</div>
+        <div className="clock-time">{timerSeconds}</div>
+      </div>
+      <div>
+        <p>{isBreak ? "BREAK" : "Work!"}</p>
+      </div>
     </div>
   );
 };

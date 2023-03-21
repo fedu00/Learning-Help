@@ -7,7 +7,7 @@
 }
 
 .pomodore-container {
-  background-color: rgb(250, 131, 95);
+  background-color: rgb(177, 93, 93);
   height: 50%;
   width: 50%;
   display: flex;
@@ -16,33 +16,35 @@
   justify-content: center;
 }
 
+.pomodore-container p {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 20px;
+}
+
 .pomodore-container .timer-container {
   display: flex;
 }
 
-.pomodore-container .timer-container input {
-  background-color: rgb(250, 131, 95);
-  border: 2px solid white;
-  border-radius: 5px;
+.pomodore-container select {
+  background-color: rgb(177, 93, 93);
+  border: 1px solid white;
   background-color: none;
   color: white;
-  font-size: 30px;
-  width: 200px;
+  font-size: 20px;
+  width: 250px;
   padding: 15px 10px;
   margin: 10px;
   outline: none;
 }
 
-.pomodore-container .timer-buttons-container {
-  margin-top: 50px;
-}
-
 .pomodore-container .timer-buttons-container button {
   font-size: 25px;
-  background-color: rgb(250, 131, 95);
+  background-color: rgb(177, 93, 93);
   padding: 15px 25px;
   margin: 10px;
   color: white;
-  border: 2px solid white;
-  border-radius: 5px;
+  border: 1px solid white;
+  margin-top: 50px;
+  cursor: pointer;
 }

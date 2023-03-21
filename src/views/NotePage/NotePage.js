@@ -37,7 +37,7 @@ const NotePage = () => {
     });
   };
   return (
-    <>
+    <div>
       <AddNote
         onAdd={addNote}
         editNoteItem={editNoteItem}
@@ -45,7 +45,7 @@ const NotePage = () => {
         editId={editId}
       />
       <Notes notes={notes} deleteNote={deleteNote} editNote={editNote} />
-    </>
+    </div>
   );
 };
 
