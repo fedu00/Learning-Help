@@ -1,5 +1,6 @@
 import NotePage from "./views/NotePage/NotePage";
 import PomodorePage from "./views/PomodorePage/PomodorePage";
+import Flashcards from "./views/Flashcards/Flashcards";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainTemplate from "./components/MainTemplate/MainTemplate";
 import { Provider } from "react-redux";
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/learning.help/" element={<NotePage />} />
             <Route path="/pomodore" element={<PomodorePage />} />
+            <Route path="/flashcards" element={<Flashcards />} />
           </Routes>
         </MainTemplate>
       </Router>

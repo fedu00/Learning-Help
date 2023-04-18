@@ -1,0 +1,140 @@
+.deck-cards-wrapper {
+  background-color: rgb(238, 208, 143);
+  font-size: 20px;
+  padding: 20px 30px;
+  margin: 10px;
+  position: relative;
+}
+
+.deck-cards-wrapper .test-button {
+  position: absolute;
+  border: none;
+  font-size: 20px;
+  color: white;
+  padding: 5px 10px;
+  background-color: rgb(71, 223, 79);
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: pink;
+  padding: 20px;
+}
+
+.absolute ul {
+  list-style-type: decimal;
+}
+
+.absolute ul li {
+  text-decoration: none;
+}
+
+.deck-cards-wrapper h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.flashcard-context {
+  margin: 15px 0;
+  padding: 10px;
+  width: 250px;
+}
+.flashcard-front {
+  background-color: aliceblue;
+}
+.flashcard-back {
+  background-color: rgb(173, 223, 226);
+  min-height: 44px;
+  font-size: 0;
+}
+
+.answer-wrapper .show {
+  font-size: 20px;
+}
+
+.answer-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.answer-wrapper button {
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 20px;
+  min-width: 70px;
+  padding: 10px;
+}
+
+.deck-page-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deck-page-control p {
+  min-width: 60px;
+  text-align: center;
+}
+.deck-page-control button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 26px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.deck-buttons {
+  display: flex;
+  justify-content: center;
+}
+.deck-buttons button {
+  border: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  background-color: red;
+}
+
+.deck-page-control button:hover {
+  color: white;
+}
+
+.check-correct-of-the-answer {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(245, 244, 210);
+  padding: 30px 40px;
+}
+
+.check-correct-of-the-answer p {
+  font-weight: 600;
+}
+
+.check-correct-buttons-wrapper {
+  display: flex;
+}
+
+.check-correct-buttons-wrapper button {
+  padding: 10px 15px;
+  font-size: 20px;
+  min-width: 50px;
+  margin: 5px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.check-correct-buttons-wrapper button:nth-child(1) {
+  background-color: rgb(67, 202, 67);
+}
+.check-correct-buttons-wrapper button:nth-child(2) {
+  background-color: rgb(223, 111, 111);
+}

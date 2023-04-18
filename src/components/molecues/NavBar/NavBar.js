@@ -1,5 +1,6 @@
 import "./NavBarStyles.css";
 import { ReactComponent as CalendarIcon } from "../../../assets/icons/calendar.svg";
+import { ReactComponent as FlashCards } from "../../../assets/icons/flashcards.svg";
 import { ReactComponent as PomodoroIcon } from "../../../assets/icons/pomodoro.svg";
 import { ReactComponent as ClockIcon } from "../../../assets/icons/clock.svg";
 import { ReactComponent as PlanIcon } from "../../../assets/icons/plan.svg";
@@ -25,6 +26,13 @@ const NavBar = () => {
         className="link"
       >
         <PomodoroIcon className={activeIcon === "pomodore" ? "active" : null} />
+      </NavLink>
+      <NavLink
+        to="/flashcards"
+        onClick={() => setActiveIcon("flashcards")}
+        className="link"
+      >
+        <FlashCards className={activeIcon === "flashcards" ? "active" : null} />
       </NavLink>
       {/* <NavLink to="/">
         <CalendarIcon />
