@@ -1,13 +1,28 @@
 .test-results-wrapper {
-  position: absolute;
+  position: relative;
+  width: 300px;
   top: 0;
   left: 0;
-  background-color: rgb(248, 225, 229);
+  background-color: #4e5a6c;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.test-results-wrapper h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .test-results-wrapper ul {
   list-style-type: decimal;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.test-results-wrapper ul li {
+  max-width: 40px;
+  margin: 0px auto 0px auto;
 }
 
 .test-results-wrapper button {
@@ -15,5 +30,7 @@
   font-size: 20px;
   padding: 10px 15px;
   cursor: pointer;
+  max-width: 100px;
+  margin: 10px auto 0 auto;
   background-color: rgb(132, 190, 241);
 }

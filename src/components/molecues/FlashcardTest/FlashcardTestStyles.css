@@ -1,9 +1,10 @@
 .deck-cards-wrapper {
-  background-color: rgb(238, 208, 143);
+  background-color: #4e5a6c;
   font-size: 20px;
   padding: 20px 30px;
   margin: 10px;
   position: relative;
+  color: white;
 }
 
 .deck-cards-wrapper .test-button {
@@ -44,6 +45,7 @@
 }
 .flashcard-front {
   background-color: aliceblue;
+  color: black;
 }
 .flashcard-back {
   background-color: rgb(173, 223, 226);
@@ -56,8 +58,17 @@
 }
 
 .answer-wrapper {
+  height: 130px;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.answer-wrapper div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 250px;
 }
 
 .answer-wrapper button {

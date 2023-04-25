@@ -2,18 +2,27 @@
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: blueviolet;
 }
 
 .wrapper svg {
   padding: 10px;
   cursor: pointer;
   transition: 0.4s;
+  margin-bottom: 30px;
 }
 .wrapper svg:hover {
   transform: scale(1.3);
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.decks-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px;
 }
 
 .form-wrapper {
