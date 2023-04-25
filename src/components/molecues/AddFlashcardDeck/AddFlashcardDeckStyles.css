@@ -1,25 +1,40 @@
-.deck-wrapper {
-  background-color: rgb(192, 192, 192);
+.add-flashcard-wrapper {
+  background-color: #4e5a6c;
   padding: 20px;
 }
 
-.deck-wrapper .deck-title-container {
+.add-flashcard-wrapper .back-button {
+  display: block;
+  margin: 0 0 10px auto;
+  background-color: rgb(163, 111, 247);
+}
+
+.add-flashcard-wrapper h1 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.add-flashcard-wrapper p {
+  color: white;
+}
+
+.deck-title-container {
   display: flex;
   flex-direction: column;
 }
-.deck-wrapper .deck-title-container p {
+.deck-title-container p {
   font-size: 20px;
   margin: 5px;
 }
 
-.deck-wrapper .deck-title-container input {
+.deck-title-container input {
   font-size: 20px;
   padding: 5px;
   border: none;
   outline: none;
 }
 
-.deck-wrapper .deck-title-container button {
+.deck-title-container button {
   padding: 10px 15px;
   font-size: 20px;
   font-weight: 600;
@@ -30,27 +45,20 @@
   cursor: pointer;
 }
 
-.deck-wrapper .add-flashcard-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-/* tu jest kolejny inout moze nie trzeba kopiowac styli */
-.deck-wrapper .add-flashcard-wrapper input {
-  font-size: 20px;
-  padding: 5px;
-  border: none;
-  outline: none;
-  margin: 10px;
-}
-.deck-wrapper .add-flashcard-wrapper button {
+.add-flashcard-wrapper button {
   padding: 10px 15px;
   font-size: 20px;
   font-weight: 600;
   background-color: rgb(81, 168, 154);
   color: white;
-  margin-top: 10px;
   border: none;
+  margin: 10px 20px 10px 0;
+  cursor: pointer;
 }
-.deck-wrapper .add-flashcard-wrapper p {
+
+.add-flashcard-wrapper button[disabled] {
+  opacity: 0.5;
+}
+.add-flashcard-wrapper p {
   font-size: 20px;
 }

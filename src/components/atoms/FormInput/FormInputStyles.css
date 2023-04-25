@@ -1,0 +1,34 @@
+.form-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.form-input-container .from-input {
+  margin-left: 5px;
+  font-size: 20px;
+  padding: 5px;
+  border: 2px solid white;
+  color: white;
+  outline: none;
+  background-color: #4e5a6c;
+}
+
+.form-input-container input::placeholder {
+  color: rgb(187, 186, 186);
+}
+
+.error .from-input {
+  border: 2px solid red;
+  box-sizing: border-box;
+}
+
+.form-input-container span {
+  opacity: 0;
+  font-size: 18px;
+}
+.error span {
+  margin-left: 10px;
+  color: rgb(255, 0, 0);
+
+  opacity: 1;
+}

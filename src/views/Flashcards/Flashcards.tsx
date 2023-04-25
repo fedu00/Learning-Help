@@ -2,66 +2,59 @@ import React, { useState } from "react";
 import "./FlashcardsStyles.css";
 import { ReactComponent as AddIcon } from "../../assets/icons/addIcon.svg";
 import AddFlashcardDeck from "../../components/molecues/AddFlashcardDeck/AddFlashcardDeck";
-import FlashcardDeck from "../../components/molecues/FlashcardDeck/FlashcardDeck";
+import FlashcardTest from "../../components/molecues/FlashcardTest/FlashcardTest";
 import { Deck } from "../../types/flashCardsTypes";
+import Flashcard from "../../components/molecues/Flashcard/Flashcard";
 
 const Flashcards = () => {
   const [decksFlashcards, setDecksFlashcards] = useState<Deck[]>([]);
-  const [createDeckOfFlashcards, setCreateDeckOfFlashcards] =
-    useState<boolean>(false);
+  const [currentDeck, setCurrentDeck] = useState<number>(0);
+  const [currentField, setCurrentField] = useState<string>("");
 
-  const handleAddFlashcardsGroup = () => {
-    setCreateDeckOfFlashcards(true);
+  const handleAddFlashcardsGroup = (): void => {
+    setCurrentField("addFlashcard");
   };
 
-  const handleDeleteFlashcard = (
-    deckIndex: number,
-    numberOfCard: number,
-    numberOfCardsInTheDeck: number
-  ) => {
+  const deleteFLashcardsDeck = (id: number): void => {
     setDecksFlashcards((prevValue) => {
-      if (numberOfCardsInTheDeck === 1) {
-        return [...prevValue.filter((deck, index) => index !== deckIndex)];
-      }
-
-      return [
-        ...prevValue.map((element, index) => {
-          if (index === deckIndex) {
-            const title = element.title;
-            const cards = element.cards.filter(
-              (Flashcard, index) => index !== numberOfCard
-            );
-            return { title, cards };
-          } else {
-            return element;
-          }
-        }),
-      ];
+      return [...prevValue.filter((deck, deckindex) => deckindex !== id)];
     });
   };
 
   return (
     <div className="wrapper">
-      {createDeckOfFlashcards ? (
-        <AddFlashcardDeck
-          handleCreateDeck={setCreateDeckOfFlashcards}
-          setDecksFlashcards={setDecksFlashcards}
-        />
-      ) : (
-        <div className="decks-wrapper">
-          <AddIcon onClick={handleAddFlashcardsGroup} />
-          {decksFlashcards.map((deck, index) =>
-            deck === undefined ? null : (
-              <FlashcardDeck
-                key={index}
-                deck={deck}
-                handleDeleteFlashcard={handleDeleteFlashcard}
-                deckIndex={index}
+      <AddIcon onClick={handleAddFlashcardsGroup} />
+      {(() => {
+        switch (currentField) {
+          case "test":
+            return (
+              <FlashcardTest
+                deck={decksFlashcards[currentDeck]}
+                setCurrentField={setCurrentField}
               />
-            )
-          )}
-        </div>
-      )}
+            );
+          case "addFlashcard":
+            return (
+              <AddFlashcardDeck
+                setDecksFlashcards={setDecksFlashcards}
+                setCurrentField={setCurrentField}
+              />
+            );
+          default:
+            return decksFlashcards.map((deck, index) =>
+              deck === undefined ? null : (
+                <Flashcard
+                  title={deck.title}
+                  key={index}
+                  index={index}
+                  setCurrentField={setCurrentField}
+                  setCurrentDeck={setCurrentDeck}
+                  deleteFLashcardsDeck={deleteFLashcardsDeck}
+                />
+              )
+            );
+        }
+      })()}
     </div>
   );
 };

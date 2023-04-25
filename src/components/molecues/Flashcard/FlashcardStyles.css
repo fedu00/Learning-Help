@@ -1,0 +1,35 @@
+.flashcard-element {
+  height: 200px;
+  width: 300px;
+  background-color: #4e5a6c;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px 20px 0;
+}
+
+.flashcard-element:hover div button {
+  opacity: 1;
+}
+.flashcard-element h1 {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 15px;
+}
+.flashcard-element div button {
+  padding: 5px 10px;
+  font-size: 20px;
+  border: none;
+  margin: 5px;
+  opacity: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.flashcard-element div button:nth-child(1) {
+  background-color: rgb(84, 179, 235);
+}
+.flashcard-element div button:nth-child(2) {
+  background-color: rgb(236, 103, 103);
+}
