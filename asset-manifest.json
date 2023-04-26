@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/learning.help/static/css/main.002fa080.css",
-    "main.js": "/learning.help/static/js/main.d12c7a47.js",
+    "main.js": "/learning.help/static/js/main.e4827e75.js",
     "static/media/pomodoro.svg": "/learning.help/static/media/pomodoro.4db6d37d52739dedfc8963791a004660.svg",
     "static/media/plan.svg": "/learning.help/static/media/plan.6df84d5ad5c14db8334b61ad66e1b224.svg",
     "static/media/clock.svg": "/learning.help/static/media/clock.dd6dc853c97f50e15e901c363d7080e9.svg",
@@ -11,10 +11,10 @@
     "static/media/addIcon.svg": "/learning.help/static/media/addIcon.847ed06344c8156fffd34c356baf9cca.svg",
     "static/media/flashcards.svg": "/learning.help/static/media/flashcards.1e6af524e7259a07e5372e986f1abd22.svg",
     "main.002fa080.css.map": "/learning.help/static/css/main.002fa080.css.map",
-    "main.d12c7a47.js.map": "/learning.help/static/js/main.d12c7a47.js.map"
+    "main.e4827e75.js.map": "/learning.help/static/js/main.e4827e75.js.map"
   },
   "entrypoints": [
     "static/css/main.002fa080.css",
-    "static/js/main.d12c7a47.js"
+    "static/js/main.e4827e75.js"
   ]
 }
