@@ -1,4 +1,4 @@
-export const WORK_DATA = [
+export const WORK_DATA: { value: string }[] = [
   {
     value: "25",
   },
@@ -18,7 +18,7 @@ export const WORK_DATA = [
     value: "60",
   },
 ];
-export const BREAK_DATA = [
+export const BREAK_DATA: { value: string }[] = [
   {
     value: "5",
   },
@@ -29,7 +29,7 @@ export const BREAK_DATA = [
     value: "15",
   },
 ];
-export const INTERVALS_DATA = [
+export const INTERVALS_DATA: { value: string }[] = [
   {
     value: "3",
   },

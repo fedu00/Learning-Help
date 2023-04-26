@@ -1,6 +1,7 @@
 import { createStore } from "redux";
+import { PomodoreDateTypes } from "../types/pomodoreTypes";
 
-export const createPomodoro = (payload) => {
+export const createPomodoro = (payload: PomodoreDateTypes) => {
   return {
     type: "start/work",
     payload,
@@ -18,7 +19,6 @@ const inicialState = {
   ],
 };
 
-//reducer
 const pomodoroReducer = (state = inicialState, action) => {
   switch (action.type) {
     case "start/work":
