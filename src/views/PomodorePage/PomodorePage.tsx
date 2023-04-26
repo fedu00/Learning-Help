@@ -3,16 +3,17 @@ import "./PomodorePageStyles.css";
 import { useDispatch } from "react-redux";
 import { createPomodoro } from "../../store";
 import { WORK_DATA, BREAK_DATA, INTERVALS_DATA } from "./PomodorePageData";
+import { PomodoreDateTypes } from "../../types/pomodoreTypes";
 
-const PomodorePage = (props) => {
+const PomodorePage = () => {
   const dispatch = useDispatch();
-  const [pomodoreData, setPomodoreData] = useState({
+  const [pomodoreData, setPomodoreData] = useState<PomodoreDateTypes>({
     workTime: 0,
     breakTime: 5,
     numberOfIntervals: 5,
   });
 
-  const handleClick = () => {
+  const handleStartWork = (): void => {
     dispatch(
       createPomodoro({
         workTime: pomodoreData.workTime,
@@ -23,8 +24,11 @@ const PomodorePage = (props) => {
     );
   };
 
-  const handlerSelect = (e, lala) => {
-    switch (lala) {
+  const handlerSelect = (
+    e: React.ChangeEvent<HTMLSelectElement>,
+    selectField: string
+  ): void => {
+    switch (selectField) {
       case "minuty":
         setPomodoreData((prevValue) => {
           return {
@@ -64,8 +68,9 @@ const PomodorePage = (props) => {
             value={pomodoreData.workTime}
             onChange={(e) => handlerSelect(e, "minuty")}
           >
-            {WORK_DATA.map((element) => (
+            {WORK_DATA.map((element, index) => (
               <option
+                key={index}
                 value={element.value}
               >{`${element.value} minutes work`}</option>
             ))}
@@ -74,8 +79,9 @@ const PomodorePage = (props) => {
             value={pomodoreData.breakTime}
             onChange={(e) => handlerSelect(e, "sekundy")}
           >
-            {BREAK_DATA.map((element) => (
+            {BREAK_DATA.map((element, index) => (
               <option
+                key={index}
                 value={element.value}
               >{`${element.value} minutes break`}</option>
             ))}
@@ -84,15 +90,16 @@ const PomodorePage = (props) => {
             value={pomodoreData.numberOfIntervals}
             onChange={(e) => handlerSelect(e, "interwaly")}
           >
-            {INTERVALS_DATA.map((element) => (
+            {INTERVALS_DATA.map((element, index) => (
               <option
+                key={index}
                 value={element.value}
               >{`${element.value} intervals`}</option>
             ))}
           </select>
         </div>
         <div className="timer-buttons-container">
-          <button onClick={handleClick}>START WORK</button>
+          <button onClick={handleStartWork}>START WORK</button>
         </div>
       </div>
     </div>

@@ -1,14 +1,27 @@
 import { useState, useEffect } from "react";
 import "./AddNoteStyles.css";
+import { NotElement } from "../../../types/noteTypes";
 
-const AddNote = ({ onAdd, editNoteItem, confirmEditNoteItem, editId }) => {
-  const [isExpanded, setExpanded] = useState(false);
-  const [note, setNote] = useState({
+interface AddNoteProps {
+  onAdd: (param: NotElement) => void;
+  editNoteItem: NotElement;
+  confirmEditNoteItem: (param: NotElement) => void;
+  editId: number | String;
+}
+
+const AddNote = ({
+  onAdd,
+  editNoteItem,
+  confirmEditNoteItem,
+  editId,
+}: AddNoteProps) => {
+  const [isExpanded, setExpanded] = useState<boolean>(false);
+  const [note, setNote] = useState<NotElement>({
     title: "",
     content: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
     setNote((preValue) => {
@@ -26,7 +39,7 @@ const AddNote = ({ onAdd, editNoteItem, confirmEditNoteItem, editId }) => {
     }
   }, [editNoteItem]);
 
-  const submitButton = (event) => {
+  const submitButton = (event: React.ChangeEvent<HTMLInputElement>): void => {
     if (note.title !== "" || note.content !== "") {
       onAdd(note);
       event.preventDefault();
@@ -40,7 +53,9 @@ const AddNote = ({ onAdd, editNoteItem, confirmEditNoteItem, editId }) => {
     }
   };
 
-  const submitEditButton = (event) => {
+  const submitEditButton = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
     if (note.title !== "" || note.content !== "") {
       confirmEditNoteItem(note);
       event.preventDefault();

@@ -1,6 +1,14 @@
 import "./noteStyles.css";
 
-const Note = ({ title, content, onDelete, id, editNote }) => {
+interface NoteProps {
+  title: String;
+  content: String;
+  onDelete: (param: string | number) => void;
+  id: number;
+  editNote: (param: string | number) => void;
+}
+
+const Note = ({ title, content, onDelete, id, editNote }: NoteProps) => {
   return (
     <div className="noteContainer">
       <p className="title">{title}</p>
