@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./FlashcardsStyles.css";
 import { ReactComponent as AddIcon } from "../../assets/icons/addIcon.svg";
 import AddFlashcardDeck from "../../components/molecues/AddFlashcardDeck/AddFlashcardDeck";
@@ -7,9 +7,15 @@ import { Deck } from "../../types/flashCardsTypes";
 import Flashcard from "../../components/molecues/Flashcard/Flashcard";
 
 const Flashcards = () => {
-  const [decksFlashcards, setDecksFlashcards] = useState<Deck[]>([]);
+  const [decksFlashcards, setDecksFlashcards] = useState<Deck[]>(
+    localStorage.length > 0 ? JSON.parse(localStorage.decksFlashcards) : []
+  );
   const [currentDeck, setCurrentDeck] = useState<number>(0);
   const [currentField, setCurrentField] = useState<string>("");
+
+  useEffect(() => {
+    localStorage.setItem("decksFlashcards", JSON.stringify(decksFlashcards));
+  }, [decksFlashcards]);
 
   const handleAddFlashcardsGroup = (): void => {
     setCurrentField("addFlashcard");
