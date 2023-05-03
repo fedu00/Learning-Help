@@ -1,9 +1,10 @@
 .noteContainer {
   width: 300px;
-  background-color: #4e5a6c;
+  background-color: #facf6c85;
+  border-radius: 5px;
   padding: 10px;
   position: relative;
-  color: white;
+  color: #05204f;
 }
 
 .title {
@@ -32,24 +33,5 @@
   right: 10px;
 }
 
-.button-container button {
-  color: white;
-  font-weight: 600;
-  border-radius: 5px;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-.button-delete {
-  background-color: rgb(155, 81, 81);
-  margin-left: 5px;
-}
-.button-edit {
-  background-color: rgb(102, 158, 149);
-}
-
 @media (max-width: 700px) {
-  .notes-container {
-    justify-content: center;
-  }
 }

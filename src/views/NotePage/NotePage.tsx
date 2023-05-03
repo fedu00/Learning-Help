@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import AddNote from "../../components/molecues/AddNote/AddNote";
-import Notes from "../../components/atoms/Notes/Notes";
 import { NotElement } from "../../types/noteTypes";
+import Note from "../../components/atoms/Note/Note";
+import "./NotePageStyles.css";
 
 const NotePage = () => {
   const [notes, setNotes] = useState<NotElement[]>(
@@ -41,14 +42,25 @@ const NotePage = () => {
     });
   };
   return (
-    <div>
+    <div className="notes-page-container">
       <AddNote
         onAdd={addNote}
         editNoteItem={editNoteItem}
         confirmEditNoteItem={confirmEditNoteItem}
         editId={editId}
       />
-      <Notes notes={notes} deleteNote={deleteNote} editNote={editNote} />
+      <div className="notes-container">
+        {notes.map((note, index) => (
+          <Note
+            key={index}
+            id={index}
+            title={note.title}
+            content={note.content}
+            onDelete={deleteNote}
+            editNote={editNote}
+          />
+        ))}
+      </div>
     </div>
   );
 };

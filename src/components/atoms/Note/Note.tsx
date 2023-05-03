@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import "./noteStyles.css";
 
 interface NoteProps {
@@ -14,12 +15,16 @@ const Note = ({ title, content, onDelete, id, editNote }: NoteProps) => {
       <p className="title">{title}</p>
       <p className="note">{content}</p>
       <div className="button-container">
-        <button className="button-edit" onClick={() => editNote(id)}>
-          edit
-        </button>
-        <button className="button-delete" onClick={() => onDelete(id)}>
-          delete
-        </button>
+        <Button
+          text="edit"
+          backgroundColor="rgb(78, 194, 214)"
+          onClickFunction={() => editNote(id)}
+        />
+        <Button
+          text="delete"
+          backgroundColor="rgb(211, 49, 49)"
+          onClickFunction={() => onDelete(id)}
+        />
       </div>
     </div>
   );

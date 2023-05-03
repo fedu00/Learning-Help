@@ -1,64 +1,60 @@
 .NavBarContainer {
-  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 3;
-  background-color: #343e4e;
-  top: 50%;
-  right: 50px;
-  transform: translateY(-50%);
-  border: 2px solid #525f73;
-  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
-  padding: 30px;
+  justify-content: center;
+  width: 150px;
 }
 
-.NavBarContainer svg {
-  height: 60px;
-  margin: 5px 0;
-  padding: 10px;
-  cursor: pointer;
-  display: block;
-  fill: #999999;
+.NavBarContainer a {
+  overflow: hidden;
   transition: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
 }
 
-.link {
-  position: relative;
-}
-.NavBarContainer .link::after {
-  position: absolute;
-  background-color: #444444;
-  top: 0px;
-  left: -140px;
-  font-size: 24px;
-  padding: 10px 15px;
-  color: white;
-  opacity: 0;
-  transition: 0.5s;
-  transition-delay: 1.5s;
+.NavBarContainer a p {
+  transition: 0.4s;
+  font-size: 18px;
+  height: 0;
+  font-weight: 600;
+  overflow: hidden;
 }
 
-.link:nth-child(1):after {
-  content: "notebook";
-}
-.link:nth-child(2):after {
-  content: "pomodore";
-}
-.link:nth-child(3):after {
-  content: "flashcards";
+.NavBarContainer a svg {
+  fill: rgb(150, 150, 150);
+  height: 60px;
+  cursor: pointer;
+  margin: 10px 0;
 }
 
-.NavBarContainer .active {
-  fill: white;
+.NavBarContainer a:hover {
+  transform: scale(1.2);
 }
 
-.NavBarContainer svg:hover {
-  transform: scale(1.3);
-  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.4);
-  fill: white;
+.NavBarContainer a:hover svg {
+  fill: black;
 }
 
-.NavBarContainer .link:hover:after {
-  opacity: 1;
+.NavBarContainer a:hover p {
+  height: 24px;
+  color: black;
+}
+
+.active {
+  transform: scale(1.2);
+  min-width: 120px;
+}
+
+.NavBarContainer .active p {
+  height: 24px;
+  color: black;
+}
+
+.NavBarContainer .active svg {
+  fill: black;
 }
