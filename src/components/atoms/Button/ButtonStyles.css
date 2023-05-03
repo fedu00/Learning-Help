@@ -1,0 +1,10 @@
+.custom-buton {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  font-weight: 600;
+  margin: 5px;
+  cursor: pointer;
+}

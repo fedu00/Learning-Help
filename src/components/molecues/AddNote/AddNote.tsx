@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./AddNoteStyles.css";
 import { NotElement } from "../../../types/noteTypes";
+import Button from "../../atoms/Button/Button";
 
 interface AddNoteProps {
   onAdd: (param: NotElement) => void;
@@ -15,7 +16,6 @@ const AddNote = ({
   confirmEditNoteItem,
   editId,
 }: AddNoteProps) => {
-  const [isExpanded, setExpanded] = useState<boolean>(false);
   const [note, setNote] = useState<NotElement>({
     title: "",
     content: "",
@@ -35,7 +35,6 @@ const AddNote = ({
   useEffect(() => {
     if (editNoteItem.length !== 0) {
       setNote(editNoteItem);
-      setExpanded(true);
     }
   }, [editNoteItem]);
 
@@ -47,7 +46,6 @@ const AddNote = ({
         title: "",
         content: "",
       });
-      setExpanded(false);
     } else {
       alert("your note is empty, you can't add it!");
     }
@@ -63,7 +61,6 @@ const AddNote = ({
         title: "",
         content: "",
       });
-      setExpanded(false);
     } else {
       alert("your note is empty, you can't confirm edit!");
     }
@@ -72,38 +69,36 @@ const AddNote = ({
   return (
     <div className="headerContainer">
       <div className="formContainer">
-        <form>
-          {isExpanded && (
-            <div className="inputContainer">
-              <input
-                className="formInput"
-                type="text"
-                placeholder="title"
-                name="title"
-                value={note.title}
-                onChange={handleChange}
-              />
-            </div>
-          )}
-          <div className="inputContainer">
-            <textarea
-              className="textAreaNote"
-              onClick={() => setExpanded(true)}
-              placeholder="your note!"
-              type="text"
-              name="content"
-              value={note.content}
-              onChange={handleChange}
-            />
-          </div>
+        <form className="inputContainer">
+          <input
+            className="formInput"
+            type="text"
+            placeholder="title"
+            name="title"
+            value={note.title}
+            onChange={handleChange}
+          />
+          <textarea
+            className="textAreaNote"
+            onClick={() => setExpanded(true)}
+            placeholder="your note!"
+            type="text"
+            name="content"
+            value={note.content}
+            onChange={handleChange}
+          />
           {editId !== "" ? (
-            <button className="add-button" onClick={submitEditButton}>
-              EDIT NOTE
-            </button>
+            <Button
+              text="EDIT NOTE"
+              backgroundColor="rgb(78, 194, 214)"
+              onClickFunction={submitEditButton}
+            />
           ) : (
-            <button className="add-button" onClick={submitButton}>
-              ADD NOTE
-            </button>
+            <Button
+              backgroundColor="#3d70c2"
+              text="ADD NOTE"
+              onClickFunction={submitButton}
+            />
           )}
         </form>
       </div>

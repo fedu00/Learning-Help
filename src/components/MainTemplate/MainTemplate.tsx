@@ -8,9 +8,9 @@ const MainTemplate = ({ children }) => {
 
   return (
     <div className="main-template-container">
-      <NavBar />
       {pomodore.workON ? <Clock /> : null}
       {children}
+      <NavBar />
     </div>
   );
 };
