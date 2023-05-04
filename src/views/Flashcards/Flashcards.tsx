@@ -4,7 +4,7 @@ import { ReactComponent as AddIcon } from "../../assets/icons/addIcon.svg";
 import AddFlashcardDeck from "../../components/molecues/AddFlashcardDeck/AddFlashcardDeck";
 import FlashcardTest from "../../components/molecues/FlashcardTest/FlashcardTest";
 import { Deck } from "../../types/flashCardsTypes";
-import Flashcard from "../../components/molecues/Flashcard/Flashcard";
+import FlashcardDeck from "../../components/molecues/FlashcardDeck/FlashcardDeck";
 
 const Flashcards = () => {
   const [decksFlashcards, setDecksFlashcards] = useState<Deck[]>(
@@ -28,8 +28,12 @@ const Flashcards = () => {
   };
 
   return (
-    <div className="wrapper">
-      <AddIcon onClick={handleAddFlashcardsGroup} />
+    <div className="flashcards-container">
+      <p>Click to add a flashcard deck!</p>
+      {/* this div is temporary until i fix the svg */}
+      <div style={{ height: "100px" }}>
+        <AddIcon onClick={handleAddFlashcardsGroup} />
+      </div>
       {(() => {
         switch (currentField) {
           case "test":
@@ -47,17 +51,21 @@ const Flashcards = () => {
               />
             );
           default:
-            return decksFlashcards.map((deck, index) =>
-              deck === undefined ? null : (
-                <Flashcard
-                  title={deck.title}
-                  key={index}
-                  index={index}
-                  setCurrentField={setCurrentField}
-                  setCurrentDeck={setCurrentDeck}
-                  deleteFLashcardsDeck={deleteFLashcardsDeck}
-                />
-              )
+            return (
+              <div className="flashcard-deck-container">
+                {decksFlashcards.map((deck, index) =>
+                  deck === undefined ? null : (
+                    <FlashcardDeck
+                      title={deck.title}
+                      key={index}
+                      index={index}
+                      setCurrentField={setCurrentField}
+                      setCurrentDeck={setCurrentDeck}
+                      deleteFLashcardsDeck={deleteFLashcardsDeck}
+                    />
+                  )
+                )}
+              </div>
             );
         }
       })()}

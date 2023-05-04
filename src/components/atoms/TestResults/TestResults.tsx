@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import "./TestResultsStyles.css";
 
 interface TestResultsProps {
@@ -27,7 +28,11 @@ const TestResults = ({
           <li key={index}>{answer}</li>
         ))}
       </ul>
-      <button onClick={handleCloseTestResults}>close</button>
+      <Button
+        text="close"
+        onClickFunction={handleCloseTestResults}
+        backgroundColor="black"
+      />
     </div>
   );
 };

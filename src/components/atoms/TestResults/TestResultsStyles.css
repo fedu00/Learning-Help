@@ -3,7 +3,6 @@
   width: 300px;
   top: 0;
   left: 0;
-  background-color: #4e5a6c;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -26,11 +25,5 @@
 }
 
 .test-results-wrapper button {
-  border: none;
-  font-size: 20px;
-  padding: 10px 15px;
-  cursor: pointer;
-  max-width: 100px;
   margin: 10px auto 0 auto;
-  background-color: rgb(132, 190, 241);
 }

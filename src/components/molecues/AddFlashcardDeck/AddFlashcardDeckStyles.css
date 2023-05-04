@@ -1,12 +1,6 @@
 .add-flashcard-wrapper {
-  background-color: #4e5a6c;
-  padding: 20px;
-}
-
-.add-flashcard-wrapper .back-button {
-  display: block;
-  margin: 0 0 10px auto;
   background-color: rgb(163, 111, 247);
+  padding: 20px;
 }
 
 .add-flashcard-wrapper h1 {
