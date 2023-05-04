@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./FlashcardTestStyles.css";
 import TestResults from "../../atoms/TestResults/TestResults";
+import Button from "../../atoms/Button/Button";
 import { Deck } from "../../../types/flashCardsTypes";
 
 interface FlashcardDeckProps {
@@ -49,22 +50,27 @@ const FlashcardTest = ({ deck, setCurrentField }: FlashcardDeckProps) => {
           <div className="answer-wrapper">
             {showAnswer ? (
               <div>
-                <p
-                  className={`flashcard-back flashcard-context ${
-                    showAnswer ? "show" : "hide"
-                  }`}
-                >
+                <p className="flashcard-back flashcard-context">
                   {deck.cards[numberOfCard].backCard}
                 </p>
-                <button onClick={() => handleAnswerTheQuestion("ok")}>
-                  yes
-                </button>
-                <button onClick={() => handleAnswerTheQuestion("wrong")}>
-                  no
-                </button>
+                <p className="question">did you answer correctly?</p>
+                <Button
+                  text="yes"
+                  backgroundColor="rgb(59, 236, 36)"
+                  onClickFunction={() => handleAnswerTheQuestion("ok")}
+                />
+                <Button
+                  text="no"
+                  backgroundColor="rgb(236, 103, 103)"
+                  onClickFunction={() => handleAnswerTheQuestion("wrong")}
+                />
               </div>
             ) : (
-              <button onClick={handleShowAnswer}>show</button>
+              <Button
+                text="show answer"
+                onClickFunction={handleShowAnswer}
+                backgroundColor="black"
+              />
             )}
           </div>
           <div className="deck-page-control">

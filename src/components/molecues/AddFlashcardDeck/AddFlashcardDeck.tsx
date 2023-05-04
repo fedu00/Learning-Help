@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import "./AddFlashcardDeckStyles.css";
 import { Card, Deck } from "../../../types/flashCardsTypes";
 import FormInput from "../../atoms/FormInput/FormInput";
+import Button from "../../atoms/Button/Button";
 
 interface AddFlashcardDeckProps {
   setDecksFlashcards: (params: any) => void;
@@ -79,9 +80,11 @@ const AddFlashcardDeck = ({
 
   return (
     <div className="add-flashcard-wrapper">
-      <button className="back-button" onClick={handleBackToMainView}>
-        back
-      </button>
+      <Button
+        text="back"
+        backgroundColor="black"
+        onClickFunction={handleBackToMainView}
+      />
       <h1>here you can create your flashcards deck</h1>
       <FormInput
         reference={titleRef}
@@ -110,10 +113,17 @@ const AddFlashcardDeck = ({
         placeholder="backCard"
         errorMessage="this field can't be  empy!"
       />
-      <button onClick={handleAddFlashcard}>add flashcard</button>
-      <button disabled={deckFlashcards.length === 0} onClick={handleAddDeck}>
-        create deck
-      </button>
+      <Button
+        text="add flashcard"
+        onClickFunction={handleAddFlashcard}
+        backgroundColor="black"
+      />
+      <Button
+        text="create deck"
+        onClickFunction={handleAddDeck}
+        backgroundColor="black"
+        disabled={deckFlashcards.length === 0}
+      />
       <p>number of cards in the deck: {deckFlashcards.length}</p>
     </div>
   );
