@@ -1,50 +1,60 @@
-.section-container {
+.pomodore-container {
+  width: calc(100vw - 150px);
   height: 100vh;
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.pomodore-container {
-  background-color: rgb(177, 93, 93);
-  height: 50%;
-  width: 50%;
+.pomodore-panel-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #f2676a;
+  border-radius: 5px;
+  padding: 100px 50px;
 }
 
-.pomodore-container p {
+.pomodore-panel-container p {
   font-size: 30px;
+  font-weight: 600;
   color: white;
   margin-bottom: 20px;
 }
 
-.pomodore-container .timer-container {
+.pomodore-panel-container .timer-container {
   display: flex;
+  margin: 30px 0;
 }
 
-.pomodore-container select {
-  background-color: rgb(177, 93, 93);
+.pomodore-panel-container select {
+  background-color: #f2676a;
   border: 1px solid white;
   background-color: none;
   color: white;
   font-size: 20px;
-  width: 250px;
+  width: 220px;
   padding: 15px 10px;
   margin: 10px;
   outline: none;
 }
 
-.pomodore-container .timer-buttons-container button {
-  font-size: 25px;
-  background-color: rgb(177, 93, 93);
-  padding: 15px 25px;
-  margin: 10px;
-  color: white;
-  border: 1px solid white;
-  margin-top: 50px;
-  cursor: pointer;
+.pomodore-panel-container button {
+  color: #f2676a;
+}
+
+@media (max-width: 1100px) {
+  .pomodore-panel-container {
+    padding: 50px 25px;
+  }
+  .pomodore-panel-container select {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .pomodore-panel-container .timer-container {
+    flex-direction: column;
+  }
 }

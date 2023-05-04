@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { createPomodoro } from "../../store";
 import { WORK_DATA, BREAK_DATA, INTERVALS_DATA } from "./PomodorePageData";
 import { PomodoreDateTypes } from "../../types/pomodoreTypes";
+import Button from "../../components/atoms/Button/Button";
 
 const PomodorePage = () => {
   const dispatch = useDispatch();
@@ -60,8 +61,8 @@ const PomodorePage = () => {
   };
 
   return (
-    <div className="section-container">
-      <div className="pomodore-container">
+    <div className="pomodore-container">
+      <div className="pomodore-panel-container">
         <p>Plan your work for today!</p>
         <div className="timer-container">
           <select
@@ -98,9 +99,12 @@ const PomodorePage = () => {
             ))}
           </select>
         </div>
-        <div className="timer-buttons-container">
-          <button onClick={handleStartWork}>START WORK</button>
-        </div>
+        <Button
+          text="START WORK"
+          onClickFunction={handleStartWork}
+          // backgroundColor="rgb(177, 93, 93)"
+        />
+        {/* </div> */}
       </div>
     </div>
   );
