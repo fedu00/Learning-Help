@@ -10,6 +10,9 @@ const Flashcards = () => {
   const [decksFlashcards, setDecksFlashcards] = useState<Deck[]>(
     localStorage.length > 0 ? JSON.parse(localStorage.decksFlashcards) : []
   );
+  console.log("1 decksFlashcards", decksFlashcards);
+  console.log("2 localStorage", localStorage);
+
   const [currentDeck, setCurrentDeck] = useState<number>(0);
   const [currentField, setCurrentField] = useState<string>("");
 
@@ -53,8 +56,11 @@ const Flashcards = () => {
           default:
             return (
               <div className="flashcard-deck-container">
-                {decksFlashcards.map((deck, index) =>
-                  deck === undefined ? null : (
+                {decksFlashcards.map((deck, index) => {
+                  console.log("3 deck", deck);
+                  console.log("4 index", index);
+
+                  return deck === undefined ? null : (
                     <FlashcardDeck
                       title={deck.title}
                       key={index}
@@ -63,8 +69,8 @@ const Flashcards = () => {
                       setCurrentDeck={setCurrentDeck}
                       deleteFLashcardsDeck={deleteFLashcardsDeck}
                     />
-                  )
-                )}
+                  );
+                })}
               </div>
             );
         }
