@@ -7,8 +7,11 @@ import { Deck } from "../../types/flashCardsTypes";
 import FlashcardDeck from "../../components/molecues/FlashcardDeck/FlashcardDeck";
 
 const Flashcards = () => {
+  const deckFromStorage = localStorage.getItem("decksFlashcards");
+  const deckFromStorageParsed =
+    deckFromStorage !== null ? JSON.parse(deckFromStorage) : [];
   const [decksFlashcards, setDecksFlashcards] = useState<Deck[]>(
-    JSON.parse(localStorage.getItem("decksFlashcards")).length > 0
+    deckFromStorageParsed.length > 0
       ? JSON.parse(localStorage.decksFlashcards)
       : []
   );
