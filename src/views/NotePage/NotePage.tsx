@@ -8,8 +8,6 @@ const NotePage = () => {
   const [notes, setNotes] = useState<NotElement[]>(
     localStorage.length > 0 ? JSON.parse(localStorage.notes) : []
   );
-  console.log("1a notes", notes);
-  console.log("2a localStorage", localStorage);
 
   const [editNoteItem, setEditNoteItem] = useState<NotElement>({
     title: "",
@@ -53,21 +51,16 @@ const NotePage = () => {
         editId={editId}
       />
       <div className="notes-container">
-        {notes.map((note, index) => {
-          console.log("3a deck", note);
-          console.log("4a index", index);
-
-          return (
-            <Note
-              key={index}
-              id={index}
-              title={note.title}
-              content={note.content}
-              onDelete={deleteNote}
-              editNote={editNote}
-            />
-          );
-        })}
+        {notes.map((note, index) => (
+          <Note
+            key={index}
+            id={index}
+            title={note.title}
+            content={note.content}
+            onDelete={deleteNote}
+            editNote={editNote}
+          />
+        ))}
       </div>
     </div>
   );
