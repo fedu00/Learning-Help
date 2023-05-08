@@ -22,7 +22,7 @@ An application aimed at gathering tools that increase the efficiency of learning
   * enhanced the ability to create more complex notes
   * assigning tasks to a specific date
 
-- The following was used to create the application:
+The following was used to create the application:
   - TypeScript
   - React
   - React-router
