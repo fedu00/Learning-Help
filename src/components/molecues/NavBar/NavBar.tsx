@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="NavBarContainer">
-      <NavLink to="/learning.help">
+      <NavLink to="/study.help">
         <NotesIcon />
         <p>notes</p>
       </NavLink>

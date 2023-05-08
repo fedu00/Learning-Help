@@ -12,7 +12,7 @@ function App() {
       <Router>
         <MainTemplate>
           <Routes>
-            <Route path="/learning.help/" element={<NotePage />} />
+            <Route path="/study.help" element={<NotePage />} />
             <Route path="/pomodore" element={<PomodorePage />} />
             <Route path="/flashcards" element={<Flashcards />} />
           </Routes>
