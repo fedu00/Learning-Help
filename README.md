@@ -17,10 +17,10 @@ An application aimed at gathering tools that increase the efficiency of learning
 
 - Currently, work to implement further functionalities such as:
 
-* monitoring the progress of study
-* creating a learning plan
-* enhanced the ability to create more complex notes
-* assigning tasks to a specific date
+  * monitoring the progress of study
+  * creating a learning plan
+  * enhanced the ability to create more complex notes
+  * assigning tasks to a specific date
 
 - The following was used to create the application:
   - TypeScript
