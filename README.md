@@ -13,7 +13,7 @@ An application aimed at gathering tools that increase the efficiency of learning
   A tool designed for people who are often distracted while learning. It allows for a rigid determination of learning time and breaks, which makes learning more organized and easier to fulfill previously established assumptions. The learning time frame, breaks and the number of intervals can be created individually depending on the needs and progressed in subsequent days. The time view is available in every view of the application.
 
 - Flashcards
-  A particularly useful tool when learning foreign languages or definitions. It is possible to create many different decks of flashcards. After completing the test from a given deck of flashcards, the results of the entire test are displayed. Flashcard decks are saved in the browser's loocal story.
+  A particularly useful tool when learning foreign languages or definitions. It is possible to create many different decks of flashcards. After completing the test from a given deck of flashcards, the results of the entire test are displayed. Flashcard decks are saved in the browser's local story.
 
 - Currently, work to implement further functionalities such as:
 
