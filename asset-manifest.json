@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/learning.help/static/css/main.b747ef28.css",
-    "main.js": "/learning.help/static/js/main.507d4832.js",
+    "main.js": "/learning.help/static/js/main.5f2f9d76.js",
     "static/media/pomodoro.svg": "/learning.help/static/media/pomodoro.4db6d37d52739dedfc8963791a004660.svg",
     "static/media/notes.svg": "/learning.help/static/media/notes.1bde19e4ec122e039fd290c65e41692e.svg",
     "index.html": "/learning.help/index.html",
     "static/media/flashcards.svg": "/learning.help/static/media/flashcards.43feae4b745b114e8ad736a89946f6b1.svg",
     "static/media/addIcon.svg": "/learning.help/static/media/addIcon.847ed06344c8156fffd34c356baf9cca.svg",
     "main.b747ef28.css.map": "/learning.help/static/css/main.b747ef28.css.map",
-    "main.507d4832.js.map": "/learning.help/static/js/main.507d4832.js.map"
+    "main.5f2f9d76.js.map": "/learning.help/static/js/main.5f2f9d76.js.map"
   },
   "entrypoints": [
     "static/css/main.b747ef28.css",
-    "static/js/main.507d4832.js"
+    "static/js/main.5f2f9d76.js"
   ]
 }
