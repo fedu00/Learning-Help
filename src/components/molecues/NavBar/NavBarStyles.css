@@ -27,6 +27,7 @@
 
 .NavBarContainer a svg {
   fill: rgb(150, 150, 150);
+  stroke: rgb(150, 150, 150);
   height: 60px;
   cursor: pointer;
   margin: 10px 0;
@@ -38,6 +39,7 @@
 
 .NavBarContainer a:hover svg {
   fill: black;
+  stroke: black;
 }
 
 .NavBarContainer a:hover p {
@@ -57,4 +59,5 @@
 
 .NavBarContainer .active svg {
   fill: black;
+  stroke: black;
 }

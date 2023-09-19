@@ -1,0 +1,38 @@
+.experience-container {
+  height: 100vh;
+  width: calc(100vw - 150px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  overflow-y: auto;
+}
+.experience-container text {
+  text-align: center;
+}
+.exp-lvl-contaioner {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.exp-lvl-contaioner .lvl {
+  font-size: 76px;
+  font-weight: 700;
+  color: rgb(224, 71, 224);
+}
+
+.exp-score {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.exp-score text {
+  font-size: 20px;
+}
+
+.exp-score .exp-score-amount {
+  color: rgb(77, 224, 143);
+  font-weight: 700;
+}
