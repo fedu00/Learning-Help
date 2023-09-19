@@ -2,6 +2,7 @@ import "./NavBarStyles.css";
 import { ReactComponent as FlashCards } from "../../../assets/icons/flashcards.svg";
 import { ReactComponent as PomodoroIcon } from "../../../assets/icons/pomodoro.svg";
 import { ReactComponent as NotesIcon } from "../../../assets/icons/notes.svg";
+import { ReactComponent as StarIcon } from "../../../assets/icons/astarIcon.svg";
 // import { ReactComponent as CalendarIcon } from "../../../assets/icons/calendar.svg";
 // import { ReactComponent as PlanIcon } from "../../../assets/icons/plan.svg";
 import { NavLink } from "react-router-dom";
@@ -20,6 +21,10 @@ const NavBar = () => {
       <NavLink to="/flashcards">
         <FlashCards />
         <p>flashcards</p>
+      </NavLink>
+      <NavLink to="/experience">
+        <StarIcon className="white" />
+        <p>experience</p>
       </NavLink>
     </div>
   );
